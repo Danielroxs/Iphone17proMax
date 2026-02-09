@@ -75,6 +75,18 @@ export function Iphone17(props) {
     }
 
     if (frontGlass) {
+      frontGlass.map = null;
+      frontGlass.normalMap = null;
+      frontGlass.envMap = null;
+      frontGlass.roughnessMap = null;
+      frontGlass.metalness = 0;
+      frontGlass.roughness = 0.1;
+      frontGlass.clearcoat = 1;
+      frontGlass.clearcoatRoughness = 0;
+      frontGlass.opacity = 1;
+      frontGlass.transparent = false;
+      frontGlass.color = new THREE.Color(props.item.color[0]);
+      frontGlass.needsUpdate = true;
       frontGlass.color = new THREE.Color("#000000");
     }
 
