@@ -13,7 +13,7 @@ import { animateWithGsapTimeLine } from "../utils/animations";
 const Model = () => {
   const [size, setSize] = useState("small");
   const [model, setModel] = useState({
-    title: "iPhone 15 Pro in Natural Titanium",
+    title: "iPhone 17 Pro Cosmic Orange",
     color: ["#EB5E28", "#1F2E3D", "#E5E6E8"],
     img: yellowImg,
   });
@@ -95,7 +95,11 @@ const Model = () => {
             </Canvas>
           </div>
           <div className="mx-auto w-full">
-            <p className="text-sm font-light text-center mb-5">{model.title}</p>
+            <p className="text-sm font-light text-center mb-5">
+              {size === "large"
+                ? model.title.replace("Pro", "Pro Max")
+                : model.title}
+            </p>
 
             <div className="flex-center ">
               <ul className="color-container">
