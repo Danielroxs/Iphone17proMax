@@ -41,9 +41,9 @@ const Hero = () => {
         <div className={isMobile ? "w-5/12" : "w-9/12"}>
           <video
             className={
-              !isMobile
-                ? "pointer-events-none absolute bottom-0 w-8/12 left-1/2 -translate-x-1/2 z-10"
-                : "pointer-events-none"
+              isMobile
+                ? "pointer-events-none w-full max-h-[60vh]"
+                : "pointer-events-none absolute bottom-0 w-8/12 left-1/2 -translate-x-1/2 z-10"
             }
             autoPlay
             muted
