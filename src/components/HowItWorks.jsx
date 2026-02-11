@@ -29,7 +29,7 @@ const HowItWorks = () => {
         once: true,
       },
       opacity: 0,
-      scale: 2,
+      scale: 1,
       duration: 2,
       ease: "power2.inOut",
     });
