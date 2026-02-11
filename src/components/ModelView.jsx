@@ -38,8 +38,10 @@ const ModelView = ({
         makeDefault
         ref={controlRef}
         enableZoom={false}
+        enableDamping={true}
+        dampingFactor={0.05}
         enablePan={false}
-        rotateSpeed={0.4}
+        rotateSpeed={1.2}
         target={new THREE.Vector3(0, 0, 0)}
         onEnd={() => setRotationState(controlRef.current.getAzimuthalAngle())}
       />
