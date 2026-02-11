@@ -1,20 +1,24 @@
-# iPhone 17 Pro Landing Demo
+# iPhone 17 Pro Landing
 
-Aplicación web interactiva para mostrar las características, modelos y novedades del iPhone 17 Pro. Desarrollada con React, Vite, Tailwind CSS y Three.js para visualización 3D.
+Aplicación web interactiva para mostrar las características, modelos y novedades del iPhone 17 Pro. Desarrollada con React, Vite, GSAP, Tailwind CSS y Three.js para visualización 3D.
 
 ## 🖼️ Vista previa
 
+**Hero principal:**
 ![Hero principal](./screenshots/hero-demo.png)
-![Modelos 3D](./screenshots/modelos-demo.png)
-![Features](./screenshots/features-demo.png)
-
-### Carrusel de modelos y videos
-
-![Carrusel](./screenshots/carousel-demo.png)
 
 ### Responsive Design / mobile view
 
+**Vista en dispositivos móviles:**
 ![Mobile](./screenshots/mobile-demo.png)
+
+**Visualización de modelos 3D:**
+![Modelos 3D](./screenshots/modelos-demo.png)
+
+### Carrusel de modelos y videos
+
+**Carrusel interactivo de modelos y videos:**
+![Carrusel](./screenshots/carousel-demo.png)
 
 ## 🚀 Demo
 
