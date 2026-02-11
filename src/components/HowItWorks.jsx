@@ -22,7 +22,7 @@ const HowItWorks = () => {
     gsap.from("#hiw-video", {
       scrollTrigger: {
         trigger: "#hiw-video",
-        start: "center center",
+        start: "75% center",
         onEnter: () => {
           videoRef.current.play();
         },
