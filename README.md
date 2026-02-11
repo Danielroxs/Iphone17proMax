@@ -9,7 +9,6 @@ Aplicación web interactiva para mostrar las características, modelos y novedad
 
 ### Responsive Design / mobile view
 
-**Vista en dispositivos móviles:**
 ![Mobile](./screenshots/mobile-demo.png)
 
 **Visualización de modelos 3D:**
@@ -17,10 +16,9 @@ Aplicación web interactiva para mostrar las características, modelos y novedad
 
 ### Carrusel de modelos y videos
 
-**Carrusel interactivo de modelos y videos:**
 ![Carrusel](./screenshots/carousel-demo.png)
 
-## 🚀 Demo
+## 🚀 INFO
 
 Proyecto desplegado en vercel. Incluye animaciones, interacción touch y visualización e interaccion 3D.
 
