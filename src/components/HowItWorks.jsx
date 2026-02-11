@@ -19,6 +19,20 @@ const HowItWorks = () => {
       ease: "power2.inOut",
     });
 
+    gsap.from("#hiw-video", {
+      scrollTrigger: {
+        trigger: "#hiw-video",
+        start: "center center",
+        onEnter: () => {
+          videoRef.current.play();
+        },
+      },
+      opacity: 0,
+      scale: 2,
+      duration: 2,
+      ease: "power2.inOut",
+    });
+
     animateWithGsap(".g_fadeIn", {
       opacity: 1,
       y: 0,
@@ -53,13 +67,14 @@ const HowItWorks = () => {
                 className="bg-transparent relative z-10"
               />
             </div>
-            <div className="hiw-video">
+            <div className="hiw-video" id="hiw-video">
               <video
                 className="pointer-events-none"
                 playsInline
-                preload="none"
+                preload="auto"
                 muted
-                autoPlay
+                autoPlay={false}
+                ref={videoRef}
               >
                 <source src={frameVideo} type="video/mp4" ref={videoRef} />
               </video>
