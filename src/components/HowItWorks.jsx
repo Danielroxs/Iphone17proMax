@@ -11,7 +11,7 @@ const HowItWorks = () => {
     gsap.from("#chip", {
       scrollTrigger: {
         trigger: "#chip",
-        start: "center center",
+        start: "top 75%",
       },
       opacity: 0,
       scale: 1,
@@ -22,7 +22,7 @@ const HowItWorks = () => {
     gsap.from("#hiw-video", {
       scrollTrigger: {
         trigger: "#hiw-video",
-        start: "75% center",
+        start: "top 75%",
         onEnter: () => {
           videoRef.current.play();
         },

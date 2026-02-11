@@ -1,69 +1,88 @@
-# Centrar un contenedor absoluto en el fondo del section (ejemplo: CTA)
+# iPhone 17 Pro Landing Demo
 
-> Si quieres que un contenedor (como el CTA) esté pegado al fondo y centrado horizontalmente en el section, usa este patrón:
+Aplicación web interactiva para mostrar las características, modelos y novedades del iPhone 17 Pro. Desarrollada con React, Vite, Tailwind CSS y Three.js para visualización 3D.
 
-```jsx
-className={
-	!isMobile
-		? "absolute bottom-0 left-1/2 -translate-x-1/2 z-20"
-		: ""
-}
-```
+## 🖼️ Vista previa
 
-Esto hace que el contenedor:
+![Hero principal](./screenshots/hero-demo.png)
+![Modelos 3D](./screenshots/modelos-demo.png)
+![Features](./screenshots/features-demo.png)
 
-- En desktop/tablet, se posicione absoluto, pegado al fondo y centrado horizontalmente.
-- En mobile, se mantenga en el flujo normal del layout.
+### Carrusel de modelos y videos
 
-Puedes combinarlo con un div interno con flex para alinear el contenido del CTA como prefieras.
+![Carrusel](./screenshots/carousel-demo.png)
 
-# Hack responsivo para video en Hero.jsx
+### Responsive Design / mobile view
 
-> Para evitar que el video y el layout se rompan en mobile (portrait o landscape), puedes condicionar las clases de Tailwind usando react-responsive:
+![Mobile](./screenshots/mobile-demo.png)
 
-```jsx
-className={
-	isMobile
-		? "pointer-events-none w-full max-h-[60vh]"
-		: "pointer-events-none absolute bottom-0 w-8/12 left-1/2 -translate-x-1/2 z-10"
-}
-```
+## 🚀 Demo
 
-Esto asegura que:
+Proyecto desplegado en vercel. Incluye animaciones, interacción touch y visualización e interaccion 3D.
 
-- En mobile/tablet, el video ocupa todo el ancho disponible y no sobrepasa el 60% de la altura de la pantalla.
-- En desktop, el video se posiciona absoluto, centrado y pegado al fondo del section.
+## 🛠️ Tecnologías
 
-Este patrón es útil para evitar que la página se "rompa" al girar el dispositivo o cambiar de tamaño de pantalla.
+- React (ES6+)
+- Vite
+- Tailwind CSS
+- Three.js / @react-three/drei (Modelo 3D)
+- GSAP (animaciones)
+- HTML5
 
-# Notas de estudio sobre Three.js
+## ✨ Funcionalidades
 
-## Recordatorio FrontGlass
+- Visualización 3D de modelos de iPhone
+- Carrusel de videos destacados
+- Animaciones GSAP al hacer scroll
+- Cambios de color y estilo en tiempo real
+- Responsive design para móviles y desktop
+- Barra de progreso sincronizada con video
+- Sección de features y especificaciones
 
-Para que el frontGlass se vea negro y opaco (como el original), usa la siguiente configuración en Scene.jsx:
+## 📂 Estructura del proyecto
 
-```
-frontGlass.map = null;
-frontGlass.normalMap = null;
-frontGlass.envMap = null;
-frontGlass.roughnessMap = null;
-frontGlass.metalness = 0;
-frontGlass.roughness = 0.1;
-frontGlass.clearcoat = 1;
-frontGlass.clearcoatRoughness = 0;
-frontGlass.opacity = 1;
-frontGlass.transparent = false;
-frontGlass.color = new THREE.Color("#000000");
-frontGlass.needsUpdate = true;
-```
+- `index.html` → Landing principal
+- `src/App.jsx` → Componente raíz
+- `src/components/` → Componentes principales (Hero, Features, HowItWorks, ModelView, VideoCarousel, etc.)
+- `src/constants/` → Datos de modelos, textos y videos
+- `public/assets/` → Imágenes, videos y modelos 3D
 
-Esto asegura que la pantalla se pinte de negro como originalmente.
+## 🧠 Aprendizajes
 
-# React + Vite
+- Integración de Three.js en React para visualización 3D
+- Animaciones avanzadas con GSAP y scrollTrigger
+- Manejo de estados y props en React
+- Diseño responsive con Tailwind CSS
+- Sincronización de UI con eventos de video
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📌 Próximas mejoras
 
-Currently, two official plugins are available:
+- Animaciones 3D más avanzadas y realistas
+- Mejorar la experiencia touch y gestos en móviles
+- Agregar selector de fondos y ambientes para el modelo 3D
+- Integrar comparador interactivo entre modelos
+- Optimizar carga de assets y modelos para mayor velocidad
+- Mejorar accesibilidad (navegación por teclado, etiquetas ARIA)
+- Agregar modo oscuro/oscuro automático
+- Internacionalización (multi-idioma)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
+
+## ℹ️ Contexto técnico
+
+Este proyecto fue desarrollado para explorar la integración de animaciones, visualización 3D y diseño moderno en React, usando Vite como entorno de desarrollo rápido. El objetivo es crear una experiencia de producto premium, similar a la web oficial de Apple.
+
+## ▶️ Cómo ejecutar el proyecto
+
+1. Clona el repositorio.
+2. Instala dependencias con `npm install`.
+3. Ejecuta el servidor local con `npm run dev`.
+4. Abre la URL local en tu navegador.
+
+## 📝 Notas
+
+- Vercel Link: https://iphone17pro-max.vercel.app/
+
+- Los modelos 3D están en formato GLB y se cargan desde la carpeta `public/models`.
+- GSAP y ScrollTrigger requieren que los elementos tengan IDs únicos para triggers precisos.
+- El proyecto es totalmente responsive y optimizado para touch.
