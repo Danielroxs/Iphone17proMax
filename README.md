@@ -1,3 +1,41 @@
+# Centrar un contenedor absoluto en el fondo del section (ejemplo: CTA)
+
+> Si quieres que un contenedor (como el CTA) esté pegado al fondo y centrado horizontalmente en el section, usa este patrón:
+
+```jsx
+className={
+	!isMobile
+		? "absolute bottom-0 left-1/2 -translate-x-1/2 z-20"
+		: ""
+}
+```
+
+Esto hace que el contenedor:
+
+- En desktop/tablet, se posicione absoluto, pegado al fondo y centrado horizontalmente.
+- En mobile, se mantenga en el flujo normal del layout.
+
+Puedes combinarlo con un div interno con flex para alinear el contenido del CTA como prefieras.
+
+# Hack responsivo para video en Hero.jsx
+
+> Para evitar que el video y el layout se rompan en mobile (portrait o landscape), puedes condicionar las clases de Tailwind usando react-responsive:
+
+```jsx
+className={
+	isMobile
+		? "pointer-events-none w-full max-h-[60vh]"
+		: "pointer-events-none absolute bottom-0 w-8/12 left-1/2 -translate-x-1/2 z-10"
+}
+```
+
+Esto asegura que:
+
+- En mobile/tablet, el video ocupa todo el ancho disponible y no sobrepasa el 60% de la altura de la pantalla.
+- En desktop, el video se posiciona absoluto, centrado y pegado al fondo del section.
+
+Este patrón es útil para evitar que la página se "rompa" al girar el dispositivo o cambiar de tamaño de pantalla.
+
 # Notas de estudio sobre Three.js
 
 ## Recordatorio FrontGlass

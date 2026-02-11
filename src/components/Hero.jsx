@@ -35,10 +35,13 @@ const Hero = () => {
   return (
     <section className="w-full nav-height bg-black relative">
       <div className="h-5/6 w-full flex-center flex-col">
-        <p id="hero" className="hero-title">
-          iPhone 17 Pro
-        </p>
-        <div className={isMobile ? "w-5/12" : "w-9/12"}>
+        {isMobile ? (
+          <p id="hero" className="hero-title">
+            iPhone 17 Pro
+          </p>
+        ) : null}
+
+        <div className={isMobile ? "w-10/12" : "w-8/12"}>
           <video
             className={
               isMobile
@@ -56,7 +59,9 @@ const Hero = () => {
       </div>
       <div
         className={
-          !isMobile ? "absolute bottom-0 left-1/2 -translate-x-1/2 z-20" : ""
+          isMobile
+            ? "w-full px-4 flex flex-col items-center"
+            : "absolute bottom-0 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center"
         }
       >
         <div
