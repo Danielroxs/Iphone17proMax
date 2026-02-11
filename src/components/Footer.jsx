@@ -13,7 +13,7 @@ const Footer = () => {
             near you.
           </p>
           <p className="font-semibold text-gray text-xs">
-            Or call 55-38-07-60-06 Luis Daniel Rodriguez Martinez:{" "}
+            Or call 55-38-07-50-05 Luis Daniel Rodriguez Martinez{" "}
           </p>
         </div>
 
@@ -21,7 +21,7 @@ const Footer = () => {
 
         <div className="flex md:flex-row flex-col md:items-center justify-between">
           <p className="font-semibold text-gray text-xs">
-            Copyright @2024 Apple Inc. All rights reserved
+            Copyright @2026 Apple Inc. All rights reserved
           </p>
           <div className="flex">
             {footerLinks.map((link, i) => (

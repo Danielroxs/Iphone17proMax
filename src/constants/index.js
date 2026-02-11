@@ -14,33 +14,29 @@ export const navLists = ["Store", "Mac", "iPhone", "Support"];
 export const hightlightsSlides = [
   {
     id: 1,
-    textLists: [
-      "Enter A17 Pro.",
-      "Game‑changing chip.",
-      "Groundbreaking performance.",
-    ],
+    textLists: ["Enter A19 Pro.", "Game‑changing chip."],
     video: highlightFirstVideo,
     videoDuration: 4,
   },
   {
     id: 2,
-    textLists: ["Titanium.", "So strong. So light. So Pro."],
+    textLists: ["Pro Camera", "So strong. So light. So Pro."],
     video: highlightSecondVideo,
     videoDuration: 5,
   },
   {
     id: 3,
     textLists: [
-      "iPhone 15 Pro Max has the",
-      "longest optical zoom in",
-      "iPhone ever. Far out.",
+      "Advanced cooling system,",
+      "Consistent peak performance.",
+      "Game and create non-stop.",
     ],
     video: highlightThirdVideo,
     videoDuration: 2,
   },
   {
     id: 4,
-    textLists: ["All-new Action button.", "What will yours do?."],
+    textLists: ["Stunning new colors.", "Choose your unique style."],
     video: highlightFourthVideo,
     videoDuration: 3.63,
   },

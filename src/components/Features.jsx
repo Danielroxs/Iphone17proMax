@@ -23,7 +23,7 @@ const Features = () => {
     animateWithGsap(
       ".g_grow",
       { scale: 1, opacity: 1, ease: "power1" },
-      { scrub: 5.5 }
+      { scrub: 5.5 },
     );
     animateWithGsap(".g_text", {
       y: 0,
@@ -44,9 +44,9 @@ const Features = () => {
 
         <div className="flex flex-col justify-center items-center overflow-hidden">
           <div className="mt-32 mb-24 pl-24">
-            <h2 className="text-5xl lg:text-7xl font-semibold">iPhone.</h2>
+            <h2 className="text-5xl lg:text-7xl font-semibold">iPhone</h2>
             <h2 className="text-5xl lg:text-7xl font-semibold">
-              Forged in titanium.
+              Forged for the future
             </h2>
           </div>
           <div className="flex-center flex-col sm:px-10">
@@ -85,24 +85,23 @@ const Features = () => {
               <div className="feature-text-container">
                 <div className="flex-1 flex-center">
                   <p className="feature-text g_text">
-                    iPhone 15 Pro is{" "}
+                    iPhone 17 Pro is{" "}
                     <span className="text-white">
-                      The first iPhone to feature an aerospace-grade titanium
-                      design
+                      crafted with 50% recycled aluminum in its enclosure
                     </span>
-                    , using the same alloy that spacecrafts use for mission to
-                    Mars
+                    , setting a new benchmark for sustainability and design in
+                    smartphones.
                   </p>
                 </div>
 
                 <div className="flex-1 flex-center">
                   <p className="feature-text g_text">
-                    Titanium has one of the best strength-to-weight ratios of
-                    any metal, making these our{" "}
+                    This advanced construction delivers{" "}
                     <span className="text-white">
-                      lightest Pro models ever.
-                    </span>
-                    , You'll notice the difference the moment you pick one up.
+                      exceptional durability and a lighter, more eco-friendly
+                      Pro model.
+                    </span>{" "}
+                    Experience innovation that cares for the planet.
                   </p>
                 </div>
               </div>
